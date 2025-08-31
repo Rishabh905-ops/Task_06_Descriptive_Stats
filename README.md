@@ -1,0 +1,129 @@
+Task 06 — Descriptive Statistics and Large Language Models
+
+This repository documents the research project for Task 06, which explores the capabilities and limitations of Large Language Models (LLMs) in combining descriptive statistical analysis with AI-generated media (deep fake interview) on Syracuse Women’s Lacrosse data.
+
+Researcher: Rishabh Rai
+Dataset: 2025 Syracuse Women’s Lacrosse (stats as of May 12, 2025)
+LLM Used: ChatGPT-4 with Advanced Data Analysis (simulated interaction)
+Audio Tool: pyttsx3 (offline TTS) and Audacity (manual mixing)
+
+1. Project Objective
+
+The goal of this research was to test how LLMs can be guided through prompt chaining to provide a coaching recommendation and then turn those insights into a simulated interview.
+
+The focus areas were:
+
+Prompt engineering
+
+Metric definition (e.g., SH%, turnovers, ground balls)
+
+LLM’s performance in descriptive statistics vs. inferential reasoning
+
+Generating an AI-based interview (script + voices)
+
+2. Phase 1 Recap
+
+In the earlier research task (July 31st report), we:
+
+Prepared Data: transcribed lacrosse stats into CSV files.
+
+Tested Simple Prompts: asked factual/statistical questions (e.g., win–loss record, top scorer).
+
+Engineered Metrics: defined “efficiency” as Shooting % (SH%).
+
+Findings: LLMs can execute clearly defined instructions but need user-provided frameworks.
+
+3. Phase 2 — Coaching Recommendation via Prompt Chaining
+
+Main guiding question:
+“To win two more games, should I focus on offense or defense, and who is the one player I should work with to be a game changer?”
+
+Step 1: Analyzing Performance in Losses
+
+Prompt: prompts/04_analysis_of_losses.txt
+
+Findings:
+
+Team scores nearly 4 fewer goals in losses.
+
+Defense allows ~1.5 more goals in losses.
+
+Offense collapse is the bigger factor.
+
+Step 2: Determining Strategic Focus
+
+Prompt: prompts/05_strategic_focus.txt
+
+LLM Recommendation:
+
+Focus on offense
+
+Justification: “Offensive decline (-3.7 goals) is more than twice as severe as defensive gap (+1.5 goals). Closing this gap is the fastest path to extra wins.”
+
+Step 3: Identifying a Game-Changer Player
+
+Prompt: prompts/06_identify_game_changer.txt
+
+LLM Findings:
+
+Team average SH%: ~43.7%
+
+High-volume shooters below average:
+
+Emma Ward (39.0%)
+
+Joely Caramelli (34.8%)
+
+LLM Recommendation:
+
+Focus on #33 Joely Caramelli
+
+Justification: “She is already a high-volume shooter (46 shots) but has the lowest efficiency. Small improvements in finishing could yield 5–6 more goals, turning close losses into wins.”
+
+Step 4: Synthesizing the Final Recommendation
+
+Prompt: prompts/07_final_recommendation.txt
+
+Final Answer:
+“Coach, to win two more games next season, your focus should be on offense. The biggest gap is scoring, not defense. The player to prioritize is #33 Joely Caramelli — she is critical to the offense but underperforming in efficiency. By working with her on shot selection and finishing, even modest improvement would directly add the goals needed to flip close losses into wins.”
+
+4. Deep Fake Interview
+
+Using the scripted Q&A, I generated an AI-based interview:
+
+Transcript: transcripts/interview_transcript.md
+
+Voices: created using scripts/generate_audio.py (pyttsx3) → audio/host_full.wav & audio/guest_full.wav
+
+Mixed in Audacity into audio/interview_mix.wav
+
+The interview opens with a disclaimer:
+“This is an AI-generated interview for an academic assignment.”
+
+5. Research Experience & Reflections
+
+User as Analyst: The LLM didn’t “decide” the framework — it executed the steps I designed.
+
+Prompt Chaining Power: Loss analysis → strategic focus → player identification → final synthesis.
+
+Strength: LLM excelled at weaving data + narrative into a clear, coach-style recommendation.
+
+Limitations: TTS voices were robotic; human mixing improved realism but was still limited.
+
+6. Conclusion & Future Work
+
+This research showed that LLMs can deliver complex, data-driven coaching insights when:
+
+Metrics are clearly defined
+
+Problems are broken into steps
+
+Outputs are validated by the human analyst
+
+Future extensions:
+
+Use more natural TTS (e.g., ElevenLabs)
+
+Try automated lip-sync for video interviews
+
+Broaden dataset to multi-season trends
