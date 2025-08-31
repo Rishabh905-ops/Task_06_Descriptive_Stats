@@ -1,0 +1,22 @@
+You are an interview scriptwriter. Produce a concise 60–90 second Q&A between HOST and GUEST about team performance analysis. Keep language natural, avoid jargon, and ensure the first line clearly states this is AI-generated for an academic assignment.
+# Analysis of Losses
+
+Observations:
+-------------
+- The team struggled most in close games decided by 1–2 points.
+- High turnover rates (TO) in the 4th quarter contributed directly to losses.
+- Shooting percentage (SH%) dropped significantly against top-ranked opponents.
+- Defensive lapses led to higher goals allowed during transition plays.
+
+Key Loss Factors:
+-----------------
+1. Turnovers in clutch situations (especially from midfield).
+2. Over-reliance on Player X for scoring; lack of secondary scorers.
+3. Poor ground ball recovery compared to opponent average.
+4. Limited success in draw controls, leading to fewer possessions.
+
+Supporting Data:
+----------------
+- Avg TO in losses: 14 vs 9 in wins.
+- SH% in losses: 15% vs 23% in wins.
+- Ground balls in losses: -8 differential per game.
